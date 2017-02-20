@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Deck represents a deck of playing cards.
  * The constructor takes an array of cards.
- * The typical usage of a deck of cards in a game is the following:
+ * The typical usages of a deck of cards in a game are the following:
  *
  * 1. Create an instance of Deck
  * 2. Shuffle the deck
@@ -79,7 +79,7 @@ public class Deck {
 	/**
 	 * Shuffle the deck of card. It shuffles only those that have not 
 	 * been dealt yet.
-	 * We'll simulate how human shuffle a deck cards: Split the cards
+	 * We'll simulate how human shuffle a deck of cards: Split the cards
 	 * roughly in half and then wave them.
 	 */
 	public void shuffle() {
@@ -109,7 +109,7 @@ public class Deck {
 		int j=cut+1;	// index of the second half
 		int deckIndex = 0;	// index of the deck
 		do {
-			// randomly pick of the two halves and put the card on the deck
+			// randomly pick the two halves and put the cards onto the deck
 			// Randomly generated a number between 0 to 100, if a random number
 			// is less than 49 (inclusive), first half otherwise second half.
 			int coinFlip = rand.nextInt(100);

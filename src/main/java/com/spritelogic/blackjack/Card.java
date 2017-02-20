@@ -13,10 +13,10 @@ public abstract class Card implements Comparable<Card> {
 	protected byte faceValue;
 
 	/**
-	 * Constructor a card with its suit and face value
+	 * Construct a card with its suit and face value
 	 * 
-	 * @param suit
-	 * @param faceValue
+	 * @param suit The suit of the card
+	 * @param faceValue The face value of the card
 	 */
 	public Card(Suit suit, byte faceValue) {
 		this.suit = suit;

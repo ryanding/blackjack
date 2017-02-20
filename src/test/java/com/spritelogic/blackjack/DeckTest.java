@@ -29,7 +29,7 @@ public class DeckTest {
 		Card card = deck.deal();
 		assertNull("Card should not be returned after all cards are dealt", card);
 		
-		// Recollecting card should give us 52 card again
+		// Recollecting card should give us 52 cards again
 		deck.recollect();
 		assertEquals("Deck is not full after recollecting", TOTAL_CARDS, 
 				deck.remaining());

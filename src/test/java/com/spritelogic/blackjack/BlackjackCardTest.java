@@ -1,6 +1,7 @@
 package com.spritelogic.blackjack;
 
 import static org.junit.Assert.*;
+import static org.fest.assertions.Assertions.*;
 
 import org.junit.Test;
 
@@ -10,10 +11,17 @@ public class BlackjackCardTest {
 
 	@Test
 	public void cardShouldBeConstructedProperly() {
-		assertEquals("Suit not constructed properly", Suit.DIAMOND, card.getSuit());
 		assertEquals("Face value not constructed properly", (byte)3, card.faceValue());
 		assertEquals("Suit not constructed properly", Suit.CLUB, faceCard.getSuit());
 		assertEquals("Face value not constructed properly", (byte)12, faceCard.faceValue());
+	}
+	
+	// Same test as above but using FEST matchers
+	@Test
+	public void cardShouldBeConstructedProperlyFEST() {
+		assertThat(card.faceValue()).isEqualTo((byte)3);
+		assertThat(faceCard.getSuit()).isNotNull().isEqualTo(Suit.CLUB);
+		assertThat(faceCard.faceValue()).isEqualTo((byte)12);
 	}
 	
 	@Test
