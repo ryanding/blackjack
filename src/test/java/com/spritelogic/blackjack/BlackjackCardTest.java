@@ -30,6 +30,13 @@ public class BlackjackCardTest {
 		assertEquals("Card value is incorrect", 10, faceCard.value());
 	}
 
+	// Same test as above but using FEST matchers
+	@Test
+	public void cardValueShouldBeCorrectFEST() {
+		assertThat(card.value()).isEqualTo(3);
+		assertThat(faceCard.value()).isEqualTo(10);
+	}
+
 	@Test
 	public void cardShouldBeComparable() {
 		assertTrue(faceCard.compareTo(card) > 0);
